@@ -1,0 +1,21 @@
+{
+  "name": "03_pasta",
+  "version": "1.0.0",
+  "description": "Please add your work to the thread :slightly_smiling_face:\r Rest of the day - Your task is to create a RESTful application using the MVC Architecture\r Not a group activity, but feel free to reach out to members of your BA group for support\r     GET /things\r     GET /things/:id\r     POST /things\r     PATCH /things/:id\r     DELETE /things/:id\r     Readme that explains how to run the API",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}

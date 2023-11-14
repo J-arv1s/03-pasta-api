@@ -10,5 +10,17 @@ const app = express()
 app.use(express.json())
 app.use(logger('dev'))
 app.use(cors())
+app.use('/pasta', pastaRoutes)
+
+app.get('/', (req, res) => {
+    res.send({
+        message: "Hello and welcome",
+        description: "PASTA API",
+        endpoints: [
+            "GET    /",
+            "GET    /pasta"
+        ]
+    })
+})
 
 module.exports = app

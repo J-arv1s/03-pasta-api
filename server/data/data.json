@@ -1,22 +1,22 @@
 [
     {
-        "name": "Spaghetti",
-        "id": 1
+        "id": 1,
+        "type": "Spaghetti"
     },
     {
-        "name": "Farfalle",
-        "id": 2
+        "id": 2,
+        "type": "Farfalle"
     },
     {
-        "name": "Fusilli",
-        "id": 3
+        "id": 3,
+        "type": "Fusilli"
     },
     {
-        "name": "Lasagna",
-        "id": 4
+        "id": 4,
+        "type": "Lasagna"
     },
     {
-        "name": "Penne",
-        "id": 5
+        "id": 5,
+        "type": "Penne"
     }
 ]
