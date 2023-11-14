@@ -10,4 +10,4 @@
 - use 'hoppscotch.io' to interact with PATCH and DELETE
 
 ## End Process
-- Ctrl + c
+- Ctrl + c in the terminal
