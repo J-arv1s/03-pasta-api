@@ -21,6 +21,27 @@ class Pasta{
             throw new Error('This pasta does not exist')
         }
     }
+
+    static create(data){
+        if(!data.type){
+            throw new Error('pasta type missing')
+        }
+        try {
+            let nextID
+            pastasData.length
+                ? nextID = pastasData.reduce((p1, p2) => p1.id > p2.id ? p1 : p2).id + 1
+                : nextID = 1
+
+            const newPasta = new Pasta({ 
+                id: nextID, 
+                type: data.type
+            })
+            pastasData.push(newPasta)
+            return newPasta
+        } catch (error) {
+            throw new Error(error)
+        }
+    }
 }
 
 module.exports = Pasta

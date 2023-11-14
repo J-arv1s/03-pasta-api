@@ -20,7 +20,8 @@ app.get('/', (req, res) => {
         endpoints: [
             "GET    /",
             "GET    /pasta",
-            "GET    /pasta/:id"
+            "GET    /pasta/:id",
+            "POST   /pasta"
         ]
     })
 })

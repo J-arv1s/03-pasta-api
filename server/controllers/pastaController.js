@@ -16,6 +16,16 @@ const show = (req, res) => {
     }
 }
 
+const create = (req, res) => {
+    try {
+        const data = req.body
+        const newPasta = Pasta.create(data)
+        res.status(201).send(newPasta)
+    } catch (error) {
+        res.status(400).send({ error: error.message })
+    }
+}
+
 module.exports = {
-    index, show
+    index, show, create
 }
