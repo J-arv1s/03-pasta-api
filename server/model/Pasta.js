@@ -1,5 +1,5 @@
 
-const pastaData = require('../data/data.json')
+const pastasData = require('../data/data.json')
 
 class Pasta{
     constructor(data){
@@ -8,8 +8,18 @@ class Pasta{
     }
 
     static getAll(){
-        const pasta = pastaData.map(p => new Pasta(p))
+        const pasta = pastasData.map(p => new Pasta(p))
         return pasta
+    }
+
+    static findByID(pastaID){
+        try {
+            const pastaData = pastasData.find(p => p.id === pastaID)
+            const pasta = new Pasta(pastaData)
+            return pasta
+        } catch (error) {
+            throw new Error('This pasta does not exist')
+        }
     }
 }
 

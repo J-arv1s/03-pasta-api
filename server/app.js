@@ -10,6 +10,7 @@ const app = express()
 app.use(express.json())
 app.use(logger('dev'))
 app.use(cors())
+
 app.use('/pasta', pastaRoutes)
 
 app.get('/', (req, res) => {
@@ -18,7 +19,8 @@ app.get('/', (req, res) => {
         description: "PASTA API",
         endpoints: [
             "GET    /",
-            "GET    /pasta"
+            "GET    /pasta",
+            "GET    /pasta/:id"
         ]
     })
 })
