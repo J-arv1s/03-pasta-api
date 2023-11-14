@@ -26,6 +26,18 @@ const create = (req, res) => {
     }
 }
 
+const update = (req, res) => {
+    try {
+        const { id } = req.params
+        const pastaToUpdate = Pasta.findByID(parseInt(id))
+
+        const updatedPasta = pastaToUpdate.update(req.body)
+        res.status(200).send(updatedPasta)
+    } catch (error) {
+        res.status(400).send({ error: error.message })
+    }
+}
+
 module.exports = {
-    index, show, create
+    index, show, create, update
 }

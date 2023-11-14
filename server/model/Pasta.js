@@ -23,9 +23,8 @@ class Pasta{
     }
 
     static create(data){
-        if(!data.type){
-            throw new Error('pasta type missing')
-        }
+        if(!data.type) throw new Error('pasta type missing')
+        
         try {
             let nextID
             pastasData.length
@@ -40,6 +39,21 @@ class Pasta{
             return newPasta
         } catch (error) {
             throw new Error(error)
+        }
+    }
+
+    update(data){
+        try {
+            const pastaData = pastasData.find(pasta => pasta.id === this.id)
+
+            if(!pastaData) throw new Error('No pasta found here')
+            
+            if(!data.type) throw new Error('pasta type missing')
+            
+            pastaData.type = data.type
+            return new Pasta(pastaData)
+        } catch (error) {
+            throw new Error(error.message)
         }
     }
 }
