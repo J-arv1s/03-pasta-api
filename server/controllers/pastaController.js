@@ -38,6 +38,18 @@ const update = (req, res) => {
     }
 }
 
+const destroy = (req, res) => {
+    try {
+        const { id } = req.params
+        const pastaToDelete = Pasta.findByID(parseInt(id))
+
+        pastaToDelete.destroy()
+        res.status(204).end()
+    } catch (error) {
+        res.status(404).send('No pasta found here')
+    }
+}
+
 module.exports = {
-    index, show, create, update
+    index, show, create, update, destroy
 }

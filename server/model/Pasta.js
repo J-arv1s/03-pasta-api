@@ -56,6 +56,17 @@ class Pasta{
             throw new Error(error.message)
         }
     }
+
+    destroy(){
+        const pastaData = pastasData.find(pasta => pasta.id === this.id)
+
+        if(pastaData){
+            const pastaIndex = pastasData.indexOf(pastaData)
+            pastasData.splice(pastaIndex, 1)
+        } else{
+            throw new Error('No pasta found here')
+        }
+    }
 }
 
 module.exports = Pasta

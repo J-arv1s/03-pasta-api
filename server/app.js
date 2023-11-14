@@ -22,7 +22,8 @@ app.get('/', (req, res) => {
             "GET    /pasta",
             "GET    /pasta/:id",
             "POST   /pasta",
-            "PATCH  /pasta/:id"
+            "PATCH  /pasta/:id",
+            "DELETE /pasta/:id"
         ]
     })
 })
